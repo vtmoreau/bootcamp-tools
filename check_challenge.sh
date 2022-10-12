@@ -9,7 +9,7 @@ flag=0
 user=$(gh api user | jq -r '.login')
 repo=$(basename "$(pwd)")
 
-if ! pwd | grep -q ~/code/"${user}"; then
+if ! pwd | grep -q ~/code/"${user}/data-"; then
     echo '⚠️ This does not look like a challenge directory'
     echo "Your challenges should be in ~/code/${user}/" 
     exit 2
